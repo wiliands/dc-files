@@ -1,0 +1,11 @@
+# Create Local Network
+docker network create -d bridge docker-network
+
+# Create Overlay Network
+docker network create -d overlay docker-network
+
+# Iniciar um container
+docker-compose -f {nome_arquivo_docker-compose} --compatibility up -d
+
+# Parar um container
+docker-compose -f {nome_arquivo_docker-compose} down

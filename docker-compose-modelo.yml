@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  {nome_sessao}:
+    container_name: {nome_container}
+    image: {imagem:versao_imagem}
+    volumes:
+      - {nome_volume}:{diretorio_do_container}
+    ports:
+      - {porta_externa:porta_container}
+    networks:
+      - {nome_network}
+    deploy:
+      resources:
+        limits:
+          cpus: {qtde_cpus}
+          memory: {qtde_memoria}
+
+volumes:
+  {nome_volume}:
+
+networks:
+  {nome_network}:
+    external: true
