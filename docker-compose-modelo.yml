@@ -4,6 +4,8 @@ services:
   {nome_sessao}:
     container_name: {nome_container}
     image: {imagem:versao_imagem}
+    environment:
+      TZ: "Amercia/Sao_Paulo"
     volumes:
       - {nome_volume}:{diretorio_do_container}
     ports:
